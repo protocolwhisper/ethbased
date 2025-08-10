@@ -5,30 +5,30 @@ graph TB
   %% High-level Taiko Protocol Architecture mapped to repo packages
 
   subgraph "Actors"
-    U["User\n(packages: bridge-ui, ui-lib, app UIs)"]
-    P["Proposer\n(package: taiko-client/proposer)"]
-    V["Prover(s)\n(package: taiko-client/prover)"]
-    R["Relayer\n(package: relayer)"]
-    IDX["Event Indexer\n(package: eventindexer)"]
-    G["DAO / Timelock\n(contracts: protocol/contracts/shared/governance,\n layer1/mainnet/TaikoDAOController.sol)"]
+    U["User (packages: bridge-ui, ui-lib, app UIs)"]
+    P["Proposer (package: taiko-client/proposer)"]
+    V["Prover(s) (package: taiko-client/prover)"]
+    R["Relayer (package: relayer)"]
+    IDX["Event Indexer (package: eventindexer)"]
+    G["DAO / Timelock (contracts: protocol/contracts/shared/governance,  layer1/mainnet/TaikoDAOController.sol)"]
   end
 
   subgraph "L1 (Ethereum)"
-    L1T["TaikoL1 (Protocol Core)\n(contracts: protocol/contracts/layer1/**)"]
-    VER["ZK Verifiers\n(contracts: protocol/contracts/layer1/verifiers/**)"]
-    PS["Prover Set / Bonds\n(contracts: protocol/contracts/layer1/provers/**)"]
-    L1S["SignalService (L1)\n(contracts: protocol/contracts/shared/signal)"]
-    L1B["Bridge (L1)\n(contracts: protocol/contracts/shared/bridge)"]
-    L1V["Token Vaults (L1)\n(contracts: protocol/contracts/shared/tokenvault)"]
-    RES["Resolver / Address Manager\n(contracts: protocol/contracts/shared/common/*Resolver*)"]
+    L1T["TaikoL1 (Protocol Core) (contracts: protocol/contracts/layer1/**)"]
+    VER["ZK Verifiers (contracts: protocol/contracts/layer1/verifiers/**)"]
+    PS["Prover Set / Bonds (contracts: protocol/contracts/layer1/provers/**)"]
+    L1S["SignalService (L1) (contracts: protocol/contracts/shared/signal)"]
+    L1B["Bridge (L1) (contracts: protocol/contracts/shared/bridge)"]
+    L1V["Token Vaults (L1) (contracts: protocol/contracts/shared/tokenvault)"]
+    RES["Resolver / Address Manager (contracts: protocol/contracts/shared/common/*Resolver*)"]
   end
 
   subgraph "L2 (Taiko)"
-    L2T["TaikoL2 (Anchor/EIP-1559)\n(contracts: protocol/contracts/layer2/**)"]
-    L2S["SignalService (L2)\n(contracts: protocol/contracts/shared/signal)"]
-    L2B["Bridge (L2)\n(contracts: protocol/contracts/shared/bridge)"]
-    L2V["Token Vaults (L2)\n(contracts: protocol/contracts/shared/tokenvault)"]
-    TR["Treasury (receives basefee)\n(system account on L2)"]
+    L2T["TaikoL2 (Anchor/EIP-1559) (contracts: protocol/contracts/layer2/**)"]
+    L2S["SignalService (L2) (contracts: protocol/contracts/shared/signal)"]
+    L2B["Bridge (L2) (contracts: protocol/contracts/shared/bridge)"]
+    L2V["Token Vaults (L2) (contracts: protocol/contracts/shared/tokenvault)"]
+    TR["Treasury (receives basefee) (system account on L2)"]
   end
 
   %% L2 usage
